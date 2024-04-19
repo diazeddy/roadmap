@@ -5,7 +5,8 @@ const App = () => {
   return (
     <>
      <MyComponent />
-     <QualityComponent />
+     {/* <QualityComponent /> */}
+     {/* <MobileResponsive /> */}
     </>
   );
 };
