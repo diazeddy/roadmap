@@ -1,5 +1,11 @@
+import MyComponent from "./MyComponent";
+
 const App = () => {
-  return <>Hy</>;
+  return (
+    <>
+     <MyComponent />
+    </>
+  );
 };
 
 export default App;

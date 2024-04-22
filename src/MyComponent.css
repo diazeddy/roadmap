@@ -1,0 +1,17 @@
+.arrow {
+    left: -62px;
+    position: absolute;
+    top: 23px;
+}
+
+.star {
+    left: -64px;
+    position: absolute;
+    top: 20px;
+}
+
+.circle {
+    left: -60px;
+    position: absolute;
+    top: 20px;
+}
