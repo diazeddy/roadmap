@@ -22,13 +22,11 @@ export default function PastReleases() {
                 For a deeper explanation, including pics + video examples, check out
                 the full
                 <br />
-                <span className="text-sky-400">release post.</span>
+                <a href="#" className="text-sky-400">release post.</a>
             </div>
             <div className="hidden sm:block mt-2 tracking-wide leading-5 max-md:max-w-full">
                 Submit your{" "}
-                <span className="text-sky-400">
-                    feedback and feature requests here.
-                </span>
+                <a href="#" className="text-sky-400">feedback and feature requests here.</a>
             </div>
         </>
     );

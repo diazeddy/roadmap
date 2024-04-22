@@ -1,4 +1,4 @@
-import React from "react"
+import { PropsWithChildren, FC } from "react"
 
 interface ListItemsProps {
     title: string,
@@ -6,11 +6,9 @@ interface ListItemsProps {
     imageClassName: string,
     displayDate?: string,
     visibleDisplayDate: boolean,
-    children?: React.ReactNode,
 }
 
-
-const ListItems = ({title, imageURL, imageClassName, displayDate, visibleDisplayDate, children} : ListItemsProps) => {
+const ListItems:FC<PropsWithChildren<ListItemsProps>> = ({title, imageURL, imageClassName, displayDate, visibleDisplayDate, children}) => {
     
     return (
         <>
