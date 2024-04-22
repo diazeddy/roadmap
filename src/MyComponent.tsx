@@ -3,6 +3,9 @@ import { useWindowSize } from "usehooks-ts";
 import Roadmap from "./components/Roadmap";
 import RoadmapContent from "./components/RoadmapContent";
 import MobileSelection from "./components/MobileSelection";
+import WorkinProgress from "./components/WorkinProgress";
+import BrandNew from "./components/BrandNew";
+import PastReleases from "./components/PastReleases";
 
 import './MyComponent.css';
 
@@ -10,19 +13,9 @@ export default function MyComponent() {
   const { width: windowWidth } = useWindowSize();
 
   const [theme, setTheme] = useState<string>("Light");
-  const [visibleWork, setVisibleWork] = useState<boolean>(true);
-  const [visibleBrand, setVisibleBrand] = useState<boolean>(true);
 
   const contentRef = useRef<HTMLDivElement>(null);
   const imageHeight = useMemo(() => contentRef.current?.clientHeight, [windowWidth])
-
-  const handleReadLessButton = () => {
-    setVisibleWork(!visibleWork);
-  }
-
-  const handleReadMoreButton = () => {
-    setVisibleBrand(!visibleBrand);
-  }
 
   return (
     <div className="flex flex-col items-start py-16 pr-20 pl-8 bg-white max-w-[810px] max-md:px-5 font-inter">
@@ -105,128 +98,9 @@ export default function MyComponent() {
           />
           <div className="grow shrink-0 pl-8 basis-0 w-fit max-md:max-w-full">
             <div id="parentDiv" className="flex flex-col " ref={contentRef}>
-              <div className="text-xl font-bold leading-6 max-md:max-w-full">
-                Work in Progress
-              </div>
-              <div style={{ position: 'relative' }}>
-                <img
-                  loading="lazy"
-                  src="https://roadmap-beta.vercel.app/static/media/arrows.d6634df28853c4dac5fb5f3eec99d3e4.svg"
-                  className="arrow"
-                  alt="arrow"
-                />
-                <div className="flex gap-2.5 mt-5 text-violet-400 rounded bg-zinc-100 max-md:flex-wrap">
-                  <div className="shrink-0 w-1 bg-violet-400 h-[34px]" />
-                  <div className="flex-1 my-auto max-md:max-w-full">
-                    SPOILER ALERT!
-                  </div>
-                </div>
-              </div>
-              <div className="md:hidden mt-5 tracking-wide text-zinc-600 max-md:max-w-full">
-                Click to uncover what we're working on right now
-              </div>
-              <div className="hidden md:block mt-5 tracking-wide leading-5 text-zinc-600 max-md:max-w-full">
-                Not big on surprises, huh? No worries, here's what we aim to launch
-                in the next few months:
-              </div>
-              {
-                visibleWork && <>
-                  <ul className="hidden md:block flex-col pl-6 mt-5 tracking-wide text-zinc-600 max-md:pl-5 max-md:max-w-full list-disc">
-                    <li className="max-md:max-w-full">Auto-complete (sanp-to-sketching)</li>
-                    <li className="max-md:max-w-full">Apple Sign In support</li>
-                    <li className="max-md:max-w-full">Scale & Measurement</li>
-                    <li className="max-md:max-w-full">Text Tool</li>
-                    <li className="max-md:max-w-full">More keyboard shortcuts</li>
-                  </ul>
-                  <div className="hidden md:block mt-5 tracking-wide text-zinc-600 max-md:max-w-full">
-                    Follow up reading:
-                  </div>
-                  <div className="hidden md:block flex-col pl-6 mt-5 tracking-wide text-sky-400 max-md:pl-5 max-md:max-w-full">
-                    <div className="max-md:max-w-full">
-                      How we make our product decisions
-                    </div>
-                    <div className="max-md:max-w-full">
-                      Feature requests & bug reports
-                    </div>
-                  </div>
-                </>
-              }
-              <div className="hidden md:block mt-5 tracking-wide text-zinc-400 max-md:max-w-full">
-                <button onClick={handleReadLessButton}>Read Less</button>
-              </div>
-              <div className="mt-5 text-xl font-bold leading-6 max-md:max-w-full">
-                Brand New
-              </div>
-              <div style={{ position: "relative" }}>
-                <img
-                  loading="lazy"
-                  src="https://roadmap-beta.vercel.app/static/media/star.4c0230edbcfad583097b5b1dad468ba1.svg"
-                  className="star"
-                  alt="star"
-                />
-                <div className="mt-5 text-lg text-sky-400 max-md:max-w-full">
-                  2022.04
-                </div>
-              </div>
-              <div className="mt-2 tracking-wide text-zinc-600 max-md:max-w-full">
-                Advanced Transforms, Interests...
-              </div>
-              {
-                visibleBrand &&
-                <div className="hidden sm:block mt-5 tracking-wide leading-5 text-zinc-600 max-md:mr-2.5 max-md:max-w-full">
-                  Some More Attended....... Some More Attended....... Some More
-                  Attended.......
-                  <br />
-                  Some More Attended....... Some More Attended....... Some More
-                  Attended.......
-                </div>
-              }
-              <div className="mt-2 tracking-wide text-zinc-400 max-md:max-w-full">
-                <button onClick={handleReadMoreButton}>Read More</button>
-              </div>
-              <div className="mt-5 text-xl font-bold leading-6 max-md:max-w-full">
-                Past Releases
-              </div>
-              <div style={{ position: "relative" }}>
-                <img
-                  loading="lazy"
-                  src="https://roadmap-beta.vercel.app/static/media/circle.8b8462a38ed9b2050487bc8726ce1392.svg"
-                  className="circle"
-                  alt="circle"
-                />
-                <div className="mt-5 text-lg text-sky-400 max-md:max-w-full">
-                  2022.2
-                </div>
-              </div>
-              <div className="hidden sm:block mt-2 tracking-wide text-zinc-600 max-md:max-w-full">
-                Something to do with Grids?
-              </div>
-              <div className="sm:hidden mt-2 tracking-wide text-zinc-600 max-md:max-w-full">
-                Something to do with grids...?
-              </div>
-              <ul className="hidden sm:block flex-col pl-6 mt-2 tracking-wide leading-5 text-zinc-600 max-md:pl-5 max-md:max-w-full list-disc">
-                <li className="max-md:max-w-full">
-                  Distort, skew and wrap your selections with the four corner
-                  handles. Pull one or two handles to adjust the aspect ratio, or tap one or two
-                  handles and pinch / spread / pull to activate the more advanced transforms.
-                </li>
-                <li className="max-md:max-w-full">
-                  Tap through the Interests list in your Account screen to help us
-                  better understand your needs.
-                </li>
-              </ul>
-              <div className="hidden sm:block mt-2 mr-6 tracking-wide leading-5 max-md:mr-2.5 max-md:max-w-full">
-                For a deeper explanation, including pics + video examples, check out
-                the full
-                <br />
-                <span className="text-sky-400">release post.</span>
-              </div>
-              <div className="hidden sm:block mt-2 tracking-wide leading-5 max-md:max-w-full">
-                Submit your{" "}
-                <span className="text-sky-400">
-                  feedback and feature requests here.
-                </span>
-              </div>
+              <WorkinProgress />
+              <BrandNew />
+              <PastReleases />
             </div>
           </div>
         </div>
