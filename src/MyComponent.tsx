@@ -38,6 +38,7 @@ export default function MyComponent() {
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff40052dc9774bde4716c49009cc482a076b466d6da3c65944e71e8ac4135228?"
               className="shrink-0 max-w-full aspect-[5.56] w-[209px]"
+              alt="light_concepts"
             />
           }
           {(theme === 'Dark') &&
@@ -45,6 +46,7 @@ export default function MyComponent() {
               loading="lazy"
               src="https://roadmap-beta.vercel.app/static/media/logoDark.7ced066b149879ee7973c36223af2885.svg"
               className="shrink-0 max-w-full aspect-[5.56] w-[209px]"
+              alt="dark_concepts"
             />
           }
           <div className="flex gap-5 items-start py-1.5">
@@ -54,6 +56,7 @@ export default function MyComponent() {
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/982d412dfad3b7e40a307f3fae3acbaa4fd1afa827972129a680a93eca08e2e8?"
                 className="shrink-0 mt-1.5 w-3 aspect-[1.72]"
+                alt="caret"
               />
             </div>
             <div className="flex justify-center items-center py-1.5 mt-1.5 bg-zinc-400">
@@ -61,6 +64,7 @@ export default function MyComponent() {
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/4f7094a65e92a67234cd3f11c943c14a96506ef574accb6a89beba9cffeaf78a?"
                 className="w-px aspect-[0.1]"
+                alt="seperater_first"
               />
             </div>
             <div className="pt-1.5 self-stretch text-base leading-5 text-center text-zinc-600">
@@ -74,12 +78,14 @@ export default function MyComponent() {
                 loading="lazy"
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/f415dd458764b812e28a480afe022843ad49cf4979fbe19d584720995139db1b?"
                 className="w-px aspect-[0.1]"
+                alt="seperater_second"
               />
             </div>
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeb465313cae6a0ff7ff69df7c6bc99f23391d0f20bb5379e11b799d03cd4171?"
               className="shrink-0 mt-2 aspect-[0.93] w-[15px]"
+              alt="magnifier"
             />
           </div>
         </div>
@@ -95,6 +101,7 @@ export default function MyComponent() {
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/20626b4754422e4e92fdc83fffd4595df240dcbb0278bde73d5942891945f593?"
             className="shrink-0 my-auto w-4 aspect-square"
+            alt="android"
           />
           <div className="flex gap-2.5 justify-center px-2.5 py-1 rounded bg-zinc-100">
             <select name="choice">
@@ -109,6 +116,7 @@ export default function MyComponent() {
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/b1fd7cbd65083269ea8f4ac8a66cc0eb7c2cb5b4d24860622286cd5f611dd5d0?"
             className="shrink-2 aspect-[0.04] w-[37px]"
             style={{ height: imageHeight }}
+            alt="line"
           />
           <div className="grow shrink-0 pl-8 basis-0 w-fit max-md:max-w-full">
             <div id="parentDiv" className="flex flex-col " ref={contentRef}>
@@ -120,6 +128,7 @@ export default function MyComponent() {
                   loading="lazy"
                   src="https://roadmap-beta.vercel.app/static/media/arrows.d6634df28853c4dac5fb5f3eec99d3e4.svg"
                   className="arrow"
+                  alt="arrow"
                 />
                 <div className="flex gap-2.5 mt-5 text-violet-400 rounded bg-zinc-100 max-md:flex-wrap">
                   <div className="shrink-0 w-1 bg-violet-400 h-[34px]" />
@@ -168,6 +177,7 @@ export default function MyComponent() {
                   loading="lazy"
                   src="https://roadmap-beta.vercel.app/static/media/star.4c0230edbcfad583097b5b1dad468ba1.svg"
                   className="star"
+                  alt="star"
                 />
                 <div className="mt-5 text-lg text-sky-400 max-md:max-w-full">
                   2022.04
@@ -197,6 +207,7 @@ export default function MyComponent() {
                   loading="lazy"
                   src="https://roadmap-beta.vercel.app/static/media/circle.8b8462a38ed9b2050487bc8726ce1392.svg"
                   className="circle"
+                  alt="circle"
                 />
                 <div className="mt-5 text-lg text-sky-400 max-md:max-w-full">
                   2022.2
