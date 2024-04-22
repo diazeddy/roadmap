@@ -1,20 +1,6 @@
 export default function PastReleases() {
     return (
         <>
-            <div className="mt-5 text-xl font-bold leading-6 max-md:max-w-full">
-                Past Releases
-            </div>
-            <div style={{ position: "relative" }}>
-            <img
-                loading="lazy"
-                src="https://roadmap-beta.vercel.app/static/media/circle.8b8462a38ed9b2050487bc8726ce1392.svg"
-                className="circle"
-                alt="circle"
-            />
-            <div className="mt-5 text-lg text-sky-400 max-md:max-w-full">
-                2022.2
-            </div>
-            </div>
             <div className="hidden sm:block mt-2 tracking-wide text-zinc-600 max-md:max-w-full">
                 Something to do with Grids?
             </div>

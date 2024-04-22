@@ -9,20 +9,6 @@ export default function BrandNew() {
 
     return (
         <>
-            <div className="mt-5 text-xl font-bold leading-6 max-md:max-w-full">
-                Brand New
-            </div>
-            <div style={{ position: "relative" }}>
-            <img
-                loading="lazy"
-                src="https://roadmap-beta.vercel.app/static/media/star.4c0230edbcfad583097b5b1dad468ba1.svg"
-                className="star"
-                alt="star"
-            />
-            <div className="mt-5 text-lg text-sky-400 max-md:max-w-full">
-                2022.04
-            </div>
-            </div>
             <div className="mt-2 tracking-wide text-zinc-600 max-md:max-w-full">
                 Advanced Transforms, Interests...
             </div>

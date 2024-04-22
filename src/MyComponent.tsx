@@ -6,8 +6,15 @@ import MobileSelection from "./components/MobileSelection";
 import WorkinProgress from "./components/WorkinProgress";
 import BrandNew from "./components/BrandNew";
 import PastReleases from "./components/PastReleases";
+import ListItems from "./ListItems";
 
 import './MyComponent.css';
+
+const imageURLGroup = [
+  "https://roadmap-beta.vercel.app/static/media/arrows.d6634df28853c4dac5fb5f3eec99d3e4.svg",
+  "https://roadmap-beta.vercel.app/static/media/star.4c0230edbcfad583097b5b1dad468ba1.svg",
+  "https://roadmap-beta.vercel.app/static/media/circle.8b8462a38ed9b2050487bc8726ce1392.svg"
+];
 
 export default function MyComponent() {
   const { width: windowWidth } = useWindowSize();
@@ -98,9 +105,15 @@ export default function MyComponent() {
           />
           <div className="grow shrink-0 pl-8 basis-0 w-fit max-md:max-w-full">
             <div id="parentDiv" className="flex flex-col " ref={contentRef}>
-              <WorkinProgress />
-              <BrandNew />
-              <PastReleases />
+              <ListItems title="Work in Progress" imageURL={imageURLGroup[0]} imageClassName="arrow" visibleDisplayDate={false}>
+                <WorkinProgress />
+              </ListItems>
+              <ListItems title="Brand New" imageURL={imageURLGroup[1]} imageClassName="star" displayDate="2022.04" visibleDisplayDate={true}>
+                <BrandNew />
+              </ListItems>
+              <ListItems title="Past Releases" imageURL={imageURLGroup[2]} imageClassName="circle" displayDate="2022.2" visibleDisplayDate={true}>
+                <PastReleases />
+              </ListItems>
             </div>
           </div>
         </div>
